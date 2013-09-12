@@ -1,5 +1,5 @@
-#= require singlepage/templates/_<%= _.underscored(name) %>
-#= require singlepage/views/<%= _.underscored(name) %>
+#= require singlepage/templates/_<%= underscored_name %>
+#= require singlepage/views/<%= underscored_name %>
 
 describe "<%= name %> View", ->
   before ->

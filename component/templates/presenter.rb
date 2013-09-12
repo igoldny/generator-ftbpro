@@ -2,11 +2,11 @@ class <%= name %>Presenter < ApplicationPresenter
   private
 
   def cached_data
-    <%= _.underscored(name) %>: '<%= _.underscored(name) %>'
+    <%= underscored_name %>: '<%= underscored_name %>'
   end
 
   def redis_key
-    "<%= _.underscored(name) %>"
+    "<%= underscored_name %>"
   end
 
   def redis_ttl
