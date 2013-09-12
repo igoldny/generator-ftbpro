@@ -6,21 +6,13 @@ var yeoman = require('yeoman-generator');
 
 var FtbproGenerator = module.exports = function FtbproGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
-
-  this.on('end', function () {
-    this.installDependencies({ skipInstall: options['skip-install'] });
-  });
-
-  this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
 };
 
 util.inherits(FtbproGenerator, yeoman.generators.Base);
 
 FtbproGenerator.prototype.askFor = function askFor() {
   var cb = this.async();
-
-  // have Yeoman greet the user.
-  console.log(this.yeoman);
+  console.log(this.yeoman); // have Yeoman greet the user.
 
   var prompts = [{
     type: 'confirm',
@@ -37,14 +29,9 @@ FtbproGenerator.prototype.askFor = function askFor() {
 };
 
 FtbproGenerator.prototype.app = function app() {
-  // this.mkdir('app');
-  // this.mkdir('app/templates');
 
-  // this.copy('_package.json', 'package.json');
-  // this.copy('_bower.json', 'bower.json');
 };
 
 FtbproGenerator.prototype.projectfiles = function projectfiles() {
-  // this.copy('editorconfig', '.editorconfig');
-  // this.copy('jshintrc', '.jshintrc');
+
 };
