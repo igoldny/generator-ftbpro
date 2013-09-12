@@ -25,7 +25,7 @@ FtbproGenerator.prototype.askFor = function askFor() {
   var prompts = [{
     type: 'confirm',
     name: 'someOption',
-    message: 'Would you like to enable this option?',
+    message: 'Would you like to enable ftbpro generator?',
     default: true
   }];
 
@@ -37,14 +37,14 @@ FtbproGenerator.prototype.askFor = function askFor() {
 };
 
 FtbproGenerator.prototype.app = function app() {
-  this.mkdir('app');
-  this.mkdir('app/templates');
+  // this.mkdir('app');
+  // this.mkdir('app/templates');
 
-  this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
+  // this.copy('_package.json', 'package.json');
+  // this.copy('_bower.json', 'bower.json');
 };
 
 FtbproGenerator.prototype.projectfiles = function projectfiles() {
-  this.copy('editorconfig', '.editorconfig');
-  this.copy('jshintrc', '.jshintrc');
+  // this.copy('editorconfig', '.editorconfig');
+  // this.copy('jshintrc', '.jshintrc');
 };
