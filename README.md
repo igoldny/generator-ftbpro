@@ -40,6 +40,9 @@ $ yo ftbpro
 
 ### ftbpro:component
 
+```
+$ yo ftbpro:component FooBar
+```
 Creates presenter, view, template, stylesheets, spec
 
 ### Getting To Know Yeoman
