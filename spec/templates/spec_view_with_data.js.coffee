@@ -1,5 +1,4 @@
-#= require singlepage/templates/_<%= underscored_name %>
-#= require singlepage/views/<%= underscored_name %>
+<%= dependency %>
 
 describe "<%= name %> View", ->
   before ->

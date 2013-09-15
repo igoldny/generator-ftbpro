@@ -13,5 +13,9 @@ var TemplateGenerator = module.exports = function TemplateGenerator(args, option
 util.inherits(TemplateGenerator, yeoman.generators.NamedBase);
 
 TemplateGenerator.prototype.files = function files() {
-  this.copy('template.jst.jade', 'singlepage/assets/javascripts/singlepage/templates/' + this.underscored_name + '.jst.jade');
+  if (this.options.base) {
+    this.copy('template.jst.jade', 'singlepage/assets/javascripts/singlepage/templates/_base_' + this.underscored_name + '.jst.jade');
+  }
+
+  this.copy('template.jst.jade', 'singlepage/assets/javascripts/singlepage/templates/_' + this.underscored_name + '.jst.jade');
 };
