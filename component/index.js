@@ -13,5 +13,5 @@ var ComponentGenerator = module.exports = function ComponentGenerator(args, opti
 util.inherits(ComponentGenerator, yeoman.generators.NamedBase);
 
 ComponentGenerator.prototype.files = function files() {
-  this.copy('spec.js.coffee', 'spec/singlepage/views/' + this.underscored_name + '.js.coffee');
+
 };
