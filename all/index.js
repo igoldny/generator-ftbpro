@@ -5,6 +5,19 @@ var fleck = require('fleck');
 
 var AllGenerator = module.exports = function AllGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
+
+  if (this.options.model) {
+    this.hookFor('ftbpro:model', {
+      args: args
+    });
+  }
+
+  if (this.options.collections) {
+    this.hookFor('ftbpro:collections', {
+      args: args
+    });
+  }
+
   this.hookFor('ftbpro:presenter', {
     args: args
   });
@@ -20,18 +33,6 @@ var AllGenerator = module.exports = function AllGenerator(args, options, config)
   this.hookFor('ftbpro:spec', {
     args: args
   });
-
-  if (this.options.model) {
-    this.hookFor('ftbpro:model', {
-      args: args
-    });
-  }
-
-  if (this.options.collections) {
-    this.hookFor('ftbpro:collections', {
-      args: args
-    });
-  }
 };
 
 util.inherits(AllGenerator, yeoman.generators.NamedBase);
