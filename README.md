@@ -44,12 +44,17 @@ $ yo ftbpro:all FooBar
 Creates presenter, view, template, stylesheets, spec
 
 ```
+$ yo ftbpro:all FooBar --hash
+```
+Creates presenter, view, model, template, stylesheets, spec for view with hash
+
+```
 $ yo ftbpro:all FooBar --model
 ```
 Creates presenter, view, model, template, stylesheets, spec for view with model, spec for model
 
 ```
-$ yo ftbpro:all FooBar --model --collections
+$ yo ftbpro:all FooBar --collection
 ```
 Creates presenter, view, model, collections, template, stylesheets, spec for view with model and collections, spec for model, spec for collections
 
@@ -103,14 +108,19 @@ $ yo ftbpro:spec FooBar
 Creates spec for view
 
 ```
-$ yo ftbpro:spec FooBar --model
+$ yo ftbpro:spec FooBar --hash
 ```
-Creates spec for view with model
+Creates spec for view with hash
 
 ```
-$ yo ftbpro:spec FooBar --model --collections
+$ yo ftbpro:spec FooBar --model
 ```
-Creates spec for view with model and collections
+Creates spec for view with model, spec for model
+
+```
+$ yo ftbpro:spec FooBar --collection
+```
+Creates spec for view with model and collection, spec for model, spec for collection
 
 ### Getting To Know Yeoman
 

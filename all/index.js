@@ -6,7 +6,7 @@ var fleck = require('fleck');
 var AllGenerator = module.exports = function AllGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
 
-  if (this.options.model) {
+  if (this.options.collections || this.options.model) {
     this.hookFor('ftbpro:model', {
       args: args
     });
