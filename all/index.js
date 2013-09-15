@@ -20,6 +20,18 @@ var AllGenerator = module.exports = function AllGenerator(args, options, config)
   this.hookFor('ftbpro:spec', {
     args: args
   });
+
+  if (this.options.model) {
+    this.hookFor('ftbpro:model', {
+      args: args
+    });
+  }
+
+  if (this.options.collections) {
+    this.hookFor('ftbpro:collections', {
+      args: args
+    });
+  }
 };
 
 util.inherits(AllGenerator, yeoman.generators.NamedBase);
