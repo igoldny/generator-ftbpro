@@ -13,5 +13,5 @@ var SpecGenerator = module.exports = function SpecGenerator(args, options, confi
 util.inherits(SpecGenerator, yeoman.generators.NamedBase);
 
 SpecGenerator.prototype.files = function files() {
-  this.copy('spec.js.coffee', 'spec/singlepage/views/' + this.underscored_name + '.js.coffee');
+  this.copy('spec.js.coffee', 'spec/singlepage/views/' + this.underscored_name + '_spec.js.coffee');
 };
