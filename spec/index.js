@@ -13,8 +13,8 @@ var SpecGenerator = module.exports = function SpecGenerator(args, options, confi
 util.inherits(SpecGenerator, yeoman.generators.NamedBase);
 
 SpecGenerator.prototype.files = function files() {
-  if (this.options.model && this.options.controller) {
-    return this.copy('spec_model_controller.js.coffee', 'spec/singlepage/views/' + this.underscored_name + '_spec.js.coffee');
+  if (this.options.model && this.options.collections) {
+    return this.copy('spec_model_collections.js.coffee', 'spec/singlepage/views/' + this.underscored_name + '_spec.js.coffee');
   }
 
   if (this.options.model) {

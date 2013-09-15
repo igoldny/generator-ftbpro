@@ -1,6 +1,6 @@
 #= require singlepage/templates/_<%= underscored_name %>
 #= require singlepage/model/<%= underscored_name %>
-#= require singlepage/controller/<%= underscored_name %>
+#= require singlepage/collections/<%= underscored_name %>
 #= require singlepage/views/<%= underscored_name %>
 
 describe "<%= name %> View", ->
