@@ -36,14 +36,81 @@ $ yo ftbpro
 ```
 
 ## Generators
-* ftbpro:component
-
-### ftbpro:component
+### All
 
 ```
-$ yo ftbpro:component FooBar
+$ yo ftbpro:all FooBar
 ```
 Creates presenter, view, template, stylesheets, spec
+
+```
+$ yo ftbpro:all FooBar --model
+```
+Creates presenter, view, model, template, stylesheets, spec for view with model, spec for model
+
+```
+$ yo ftbpro:all FooBar --model --collections
+```
+Creates presenter, view, model, collections, template, stylesheets, spec for view with model and collections, spec for model, spec for collections
+
+### Presenter
+
+```
+$ yo ftbpro:presenter FooBar
+```
+Creates presenter
+
+### View
+
+```
+$ yo ftbpro:view FooBar
+```
+Creates view
+
+### Model
+
+```
+$ yo ftbpro:model FooBar
+```
+Creates model
+
+### Collections
+
+```
+$ yo ftbpro:collections FooBar
+```
+Creates collections
+
+### Template
+
+```
+$ yo ftbpro:template FooBar
+```
+Creates template
+
+### Css
+
+```
+$ yo ftbpro:css FooBar
+```
+Creates css
+
+### Spec
+
+```
+$ yo ftbpro:spec FooBar
+```
+Creates spec for view
+
+```
+$ yo ftbpro:spec FooBar --model
+```
+Creates spec for view with model
+
+```
+$ yo ftbpro:spec FooBar --model --collections
+```
+Creates spec for view with model and collections
 
 ### Getting To Know Yeoman
 
