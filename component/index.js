@@ -13,7 +13,6 @@ var ComponentGenerator = module.exports = function ComponentGenerator(args, opti
 util.inherits(ComponentGenerator, yeoman.generators.NamedBase);
 
 ComponentGenerator.prototype.files = function files() {
-  this.copy('presenter.rb', 'app/presenters/' + this.underscored_name + '_presenter.rb');
   this.copy('view.js.coffee', 'singlepage/assets/javascripts/singlepage/views/' + this.underscored_name + '.js.coffee');
   this.copy('template.jst.jade', 'singlepage/assets/javascripts/singlepage/templates/' + this.underscored_name + '.jst.jade');
   this.copy('stylesheets.css.scss', 'singlepage/assets/stylesheets/singlepage/views/' + this.dasherize_name + '.css.scss');
