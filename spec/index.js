@@ -13,6 +13,7 @@ var SpecGenerator = module.exports = function SpecGenerator(args, options, confi
 util.inherits(SpecGenerator, yeoman.generators.NamedBase);
 
 SpecGenerator.prototype.files = function files() {
+  this.dataStubTemplate = [];
   this.dependency = [
     '#= require singlepage/templates/_' + this.underscored_name,
     '#= require singlepage/views/' + this.underscored_name
@@ -25,13 +26,30 @@ SpecGenerator.prototype.files = function files() {
   if (this.options.collections) {
     this.dependency.push('#= require singlepage/model/' + this.underscored_name);
     this.dependency.push('#= require singlepage/collections/' + this.underscored_name);
+    this.dataStubTemplate = [
+      '[',
+      "   test: 'test'",
+      ',',
+      "   test: 'test'",
+      ']',
+    ];
   }
 
   if (this.options.model) {
     this.dependency.push('#= require singlepage/model/' + this.underscored_name);
+    this.dataStubTemplate = [
+      "test: 'test'"
+    ];
+  }
+
+  if (this.options.hash) {
+    this.dataStubTemplate = [
+      "test: 'test'"
+    ];
   }
 
   this.dependency = this.dependency.join('\n');
+  this.dataStubTemplate = this.dataStubTemplate.join('\n');
 
   if (this.options.collections) {
     this.copy('spec_model.js.coffee', 'spec/javascripts/singlepage/models/' + this.underscored_name + '_spec.js.coffee');

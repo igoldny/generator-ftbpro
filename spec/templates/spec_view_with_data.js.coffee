@@ -10,7 +10,7 @@ describe "<%= name %> View", ->
       hash: '<%= name %>'
 
     @dataStub =
-      test: 'test'
+      <%= dataStubTemplate %>
 
     @testView = loadViewForTest @component, @dataStub
 
