@@ -1,6 +1,7 @@
 'use strict';
 var util = require('util');
 var yeoman = require('yeoman-generator');
+var fleck = require('fleck');
 
 var PresenterGenerator = module.exports = function PresenterGenerator(args, options, config) {
   yeoman.generators.NamedBase.apply(this, arguments);
