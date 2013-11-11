@@ -25,7 +25,7 @@ FtbproGenerator.prototype.askFor = function askFor() {
   var prompts = [{
     type: 'confirm',
     name: 'someOption',
-    message: 'Would you like to enable this option?',
+    message: 'Would you like to enable this awesome option?',
     default: true
   }];
 
